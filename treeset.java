@@ -4,14 +4,20 @@ import java.util.TreeSet;
 public class treeset {
 
     public static void main(String[] args) {
-        System.out.println("Java Collections: Tree Set Example!\n");
+        System.out.println("Tree Set Example!\n");
         TreeSet<Integer> tree = new TreeSet<Integer>();
-        tree.add(10);
-        tree.add(89);
+        tree.add(12);
+        tree.add(63);
         tree.add(34);
         tree.add(45);
+        tree.add(12);
+        tree.add( 3 );
 
-        // sorts data, 89 is the last element. see output below
+                    //Nasty path add a null : NullPointerException
+                    //tree.add(null);
+                    //tree.add
+
+        // sorts data, 63 is the last element. see output below
         Iterator<Integer> iterator = tree.iterator();
         System.out.print("Tree set data: ");
 
@@ -27,6 +33,8 @@ public class treeset {
         } else {
             System.out.println("Tree Set size: " + tree.size());
         }
+                    //Nasty path only has one data set: NoSuchElementException
+                   // tree.clear();
 
         // Retrieve first data from tree set
         System.out.println("First data: " + tree.first());
@@ -58,3 +66,4 @@ public class treeset {
         }
     }
 }
+
